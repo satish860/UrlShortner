@@ -31,7 +31,19 @@ namespace UrlShortner.Tests
             var response = await this.httpClient
                 .POSTAsync<CreateUrlEndpoint, CreateUrlRequest,CreateUrlResponse>(request);
             response.result.Url.Should().Be(request.Url);
+        }
 
+        [Fact]
+        public async Task Should_be_Able_to_Short_the_Url()
+        {
+            var request = new CreateUrlRequest
+            {
+                Url = "http://google.co.in"
+            };
+            var response = await this.httpClient
+                .POSTAsync<CreateUrlEndpoint, CreateUrlRequest, CreateUrlResponse>(request);
+            response.response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+            response.result.Url.Should().NotBeEmpty();
         }
     }
 }
