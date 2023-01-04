@@ -16,6 +16,9 @@ namespace UrlShortner.Api.CreateUrl
         {
             var shortcode = await Nanoid.Nanoid.GenerateAsync(Alphabet, 10);
             var shortUrl = $"{BaseURL}{shortcode}";
+
+            // 
+
             var response = new CreateUrlResponse
             {
                 Url = shortUrl

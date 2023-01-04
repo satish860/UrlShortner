@@ -28,9 +28,10 @@ namespace UrlShortner.Tests
                 Url = "http://google.co.in"
             };
 
-            var response = await this.httpClient
+            var (response,result) = await this.httpClient
                 .POSTAsync<CreateUrlEndpoint, CreateUrlRequest,CreateUrlResponse>(request);
-            response.result.Url.Should().Be(request.Url);
+            result.Should().NotBeNull();
+            result.Url.Should().Be(request.Url);
         }
 
         [Fact]

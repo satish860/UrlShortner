@@ -1,4 +1,7 @@
 global using FastEndpoints;
+using Marten;
+using Microsoft.Extensions.Options;
+using Weasel.Core;
 
 namespace UrlShortner.Api
 {
@@ -11,27 +14,20 @@ namespace UrlShortner.Api
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+           
+            builder.Services.AddMarten(opt =>
+            {
+                opt.Connection(builder.Configuration.GetConnectionString("Default"));
+                if (builder.Environment.IsDevelopment())
+                {
+                    opt.AutoCreateSchemaObjects = AutoCreate.All;
+                }
+            });
 
             var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
-
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
             app.UseFastEndpoints();
-
-            app.MapControllers();
-
             app.Run();
         }
     }
