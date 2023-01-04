@@ -31,7 +31,7 @@ namespace UrlShortner.Tests
             var (response,result) = await this.httpClient
                 .POSTAsync<CreateUrlEndpoint, CreateUrlRequest,CreateUrlResponse>(request);
             result.Should().NotBeNull();
-            result.Url.Should().Be(request.Url);
+            result.Url.Should().NotBeNullOrEmpty();
         }
 
         [Fact]
@@ -41,10 +41,10 @@ namespace UrlShortner.Tests
             {
                 Url = "http://google.co.in"
             };
-            var response = await this.httpClient
+            var (response,result) = await this.httpClient
                 .POSTAsync<CreateUrlEndpoint, CreateUrlRequest, CreateUrlResponse>(request);
-            response.response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-            response.result.Url.Should().NotBeEmpty();
+            response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+            result.Url.Should().NotBeEmpty();
         }
     }
 }

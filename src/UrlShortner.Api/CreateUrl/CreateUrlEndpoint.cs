@@ -6,6 +6,13 @@ namespace UrlShortner.Api.CreateUrl
     public class CreateUrlEndpoint : Endpoint<CreateUrlRequest, CreateUrlResponse>
     {
         private const string Alphabet = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private readonly IStoreShortUrl storeShortUrl;
+
+        public CreateUrlEndpoint(IStoreShortUrl storeShortUrl)
+        {
+            this.storeShortUrl = storeShortUrl;
+        }
+
         public override void Configure()
         {
             Post("api/create");
@@ -17,11 +24,16 @@ namespace UrlShortner.Api.CreateUrl
             var shortcode = await Nanoid.Nanoid.GenerateAsync(Alphabet, 10);
             var shortUrl = $"{BaseURL}{shortcode}";
 
-            // 
+            var savedShortcode = await this.storeShortUrl.CreateShortUrl(new Domain.ShortUrl
+            {
+                Id = shortcode,
+                OriginalUrl = shortUrl,
+                Url = req.Url
+            });
 
             var response = new CreateUrlResponse
             {
-                Url = shortUrl
+                Url = savedShortcode
             };
             await SendAsync(response, 200, ct);
         }
