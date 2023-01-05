@@ -17,7 +17,7 @@ namespace UrlShortner.Tests
         public GetUrlEndpointTests(ApiWebFactory apiWebFactory)
         {
             this.apiWebFactory = apiWebFactory;
-            this.httpClient = apiWebFactory.CreateDefaultClient();
+            this.httpClient = this.apiWebFactory.CreateDefaultClient();
         }
 
         [Fact]
