@@ -1,4 +1,6 @@
 # UrlShortner
+
+[![.NET](https://github.com/satish860/UrlShortner/actions/workflows/dotnet.yml/badge.svg)](https://github.com/satish860/UrlShortner/actions/workflows/dotnet.yml)
 ## Outcome 
 Create a Short URL APP and deploy to internet so you can learn how to deploy a application and database 
 to production. 
