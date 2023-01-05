@@ -1,0 +1,172 @@
+{
+  "UrlShortner.Api.dll": {
+    "C:\\Github\\UrlShortner\\src\\UrlShortner.Api\\Program.cs": {
+      "UrlShortner.Api.Program": {
+        "System.Void UrlShortner.Api.Program::Main(System.String[])": {
+          "Lines": {
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 4,
+            "25": 2,
+            "26": 2,
+            "27": 2,
+            "28": 2,
+            "29": 2,
+            "30": 2
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 47,
+              "EndOffset": 49,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 19,
+              "Offset": 47,
+              "EndOffset": 58,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Github\\UrlShortner\\src\\UrlShortner.Api\\Domain\\UrlShortner.cs": {
+      "UrlShortner.Api.Domain.ShortUrl": {
+        "System.String UrlShortner.Api.Domain.ShortUrl::get_Id()": {
+          "Lines": {
+            "5": 24
+          },
+          "Branches": []
+        },
+        "System.String UrlShortner.Api.Domain.ShortUrl::get_Url()": {
+          "Lines": {
+            "7": 6
+          },
+          "Branches": []
+        },
+        "System.String UrlShortner.Api.Domain.ShortUrl::get_OriginalUrl()": {
+          "Lines": {
+            "9": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Github\\UrlShortner\\src\\UrlShortner.Api\\CreateUrl\\CreateUrlEndpoint.cs": {
+      "UrlShortner.Api.CreateUrl.CreateUrlEndpoint": {
+        "System.Void UrlShortner.Api.CreateUrl.CreateUrlEndpoint::Configure()": {
+          "Lines": {
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2
+          },
+          "Branches": []
+        },
+        "System.Void UrlShortner.Api.CreateUrl.CreateUrlEndpoint::.ctor(UrlShortner.Api.CreateUrl.IStoreShortUrl)": {
+          "Lines": {
+            "11": 4,
+            "12": 4,
+            "13": 4,
+            "14": 4
+          },
+          "Branches": []
+        }
+      },
+      "UrlShortner.Api.CreateUrl.CreateUrlEndpoint/<HandleAsync>d__4": {
+        "System.Void UrlShortner.Api.CreateUrl.CreateUrlEndpoint/<HandleAsync>d__4::MoveNext()": {
+          "Lines": {
+            "23": 2,
+            "24": 2,
+            "25": 2,
+            "27": 2,
+            "28": 2,
+            "29": 2,
+            "30": 2,
+            "31": 2,
+            "32": 2,
+            "34": 2,
+            "35": 2,
+            "36": 2,
+            "37": 2,
+            "38": 2,
+            "39": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Github\\UrlShortner\\src\\UrlShortner.Api\\CreateUrl\\CreateUrlRequest.cs": {
+      "UrlShortner.Api.CreateUrl.CreateUrlRequest": {
+        "System.String UrlShortner.Api.CreateUrl.CreateUrlRequest::get_Url()": {
+          "Lines": {
+            "5": 8
+          },
+          "Branches": []
+        },
+        "System.String UrlShortner.Api.CreateUrl.CreateUrlRequest::get_AlternativeKey()": {
+          "Lines": {
+            "7": 8
+          },
+          "Branches": []
+        },
+        "System.String UrlShortner.Api.CreateUrl.CreateUrlRequest::get_UserName()": {
+          "Lines": {
+            "13": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Github\\UrlShortner\\src\\UrlShortner.Api\\CreateUrl\\CreateUrlResponse.cs": {
+      "UrlShortner.Api.CreateUrl.CreateUrlResponse": {
+        "System.String UrlShortner.Api.CreateUrl.CreateUrlResponse::get_Url()": {
+          "Lines": {
+            "5": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Github\\UrlShortner\\src\\UrlShortner.Api\\CreateUrl\\StoreShortUrl.cs": {
+      "UrlShortner.Api.CreateUrl.StoreShortUrl": {
+        "System.Void UrlShortner.Api.CreateUrl.StoreShortUrl::.ctor(Marten.IDocumentStore)": {
+          "Lines": {
+            "10": 5,
+            "11": 5,
+            "12": 5,
+            "13": 5
+          },
+          "Branches": []
+        }
+      },
+      "UrlShortner.Api.CreateUrl.StoreShortUrl/<CreateShortUrl>d__2": {
+        "System.Void UrlShortner.Api.CreateUrl.StoreShortUrl/<CreateShortUrl>d__2::MoveNext()": {
+          "Lines": {
+            "16": 3,
+            "17": 3,
+            "18": 3,
+            "19": 3,
+            "20": 3,
+            "21": 3
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

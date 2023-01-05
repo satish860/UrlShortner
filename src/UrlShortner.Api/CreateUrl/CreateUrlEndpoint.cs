@@ -33,7 +33,7 @@ namespace UrlShortner.Api.CreateUrl
 
             var response = new CreateUrlResponse
             {
-                Url = savedShortcode
+                Url = shortUrl
             };
             await SendAsync(response, 200, ct);
         }

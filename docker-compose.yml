@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  urlshortner.api:
+    image: ${DOCKER_REGISTRY-}urlshortnerapi
+    build:
+      context: .
+      dockerfile: src/UrlShortner.Api/Dockerfile
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+        - "5432:5432"
+    environment:
+       POSTGRES_PASSWORD: manning
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
+    driver: local
