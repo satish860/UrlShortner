@@ -24,7 +24,7 @@ namespace UrlShortner.Api.CreateUrl
             }
             else
             {
-                return new Result<string> { IsSucess = false, Error = "Key Already Exist. Try again" };
+                return new Result<string> { IsSucess = false, Error = "Key Already Exist. Try again",ErrorCode=51 };
             }
             return new Result<string> { Data=shortUrl.Id};
         }
