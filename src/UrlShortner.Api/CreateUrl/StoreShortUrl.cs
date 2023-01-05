@@ -1,4 +1,5 @@
 ﻿using Marten;
+using Marten.Services;
 using UrlShortner.Api.Domain;
 
 namespace UrlShortner.Api.CreateUrl
@@ -12,12 +13,20 @@ namespace UrlShortner.Api.CreateUrl
             this.documentStore = documentStore;
         }
 
-        public async Task<string> CreateShortUrl(ShortUrl shortUrl)
+        public async Task<Result<string>> CreateShortUrl(ShortUrl shortUrl)
         {
             using var session = this.documentStore.LightweightSession();
-            session.Store(shortUrl);
-            await session.SaveChangesAsync();
-            return shortUrl.Id;
+            var valueExist = session.Query<ShortUrl>().Where(p => p.Id == shortUrl.Id).FirstOrDefault();
+            if (valueExist == null)
+            {
+                session.Store(shortUrl);
+                await session.SaveChangesAsync();
+            }
+            else
+            {
+                return new Result<string> { IsSucess = false, Error = "Key Already Exist. Try again" };
+            }
+            return new Result<string> { Data=shortUrl.Id};
         }
     }
 }

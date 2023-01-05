@@ -4,6 +4,6 @@ namespace UrlShortner.Api.CreateUrl
 {
     public interface IStoreShortUrl
     {
-        Task<string> CreateShortUrl(ShortUrl shortUrl);
+        Task<Result<string>> CreateShortUrl(ShortUrl shortUrl);
     }
 }

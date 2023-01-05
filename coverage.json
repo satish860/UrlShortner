@@ -44,23 +44,45 @@
         }
       }
     },
+    "C:\\Github\\UrlShortner\\src\\UrlShortner.Api\\Domain\\Result.cs": {
+      "UrlShortner.Api.Domain.Result`1": {
+        "T UrlShortner.Api.Domain.Result`1::get_Data()": {
+          "Lines": {
+            "5": 10
+          },
+          "Branches": []
+        },
+        "System.Boolean UrlShortner.Api.Domain.Result`1::get_IsSucess()": {
+          "Lines": {
+            "7": 8
+          },
+          "Branches": []
+        },
+        "System.String UrlShortner.Api.Domain.Result`1::get_Error()": {
+          "Lines": {
+            "9": 6
+          },
+          "Branches": []
+        }
+      }
+    },
     "C:\\Github\\UrlShortner\\src\\UrlShortner.Api\\Domain\\UrlShortner.cs": {
       "UrlShortner.Api.Domain.ShortUrl": {
         "System.String UrlShortner.Api.Domain.ShortUrl::get_Id()": {
           "Lines": {
-            "5": 24
+            "5": 39
           },
           "Branches": []
         },
         "System.String UrlShortner.Api.Domain.ShortUrl::get_Url()": {
           "Lines": {
-            "7": 6
+            "7": 10
           },
           "Branches": []
         },
         "System.String UrlShortner.Api.Domain.ShortUrl::get_OriginalUrl()": {
           "Lines": {
-            "9": 6
+            "9": 10
           },
           "Branches": []
         }
@@ -146,10 +168,10 @@
       "UrlShortner.Api.CreateUrl.StoreShortUrl": {
         "System.Void UrlShortner.Api.CreateUrl.StoreShortUrl::.ctor(Marten.IDocumentStore)": {
           "Lines": {
-            "10": 5,
-            "11": 5,
-            "12": 5,
-            "13": 5
+            "11": 6,
+            "12": 6,
+            "13": 6,
+            "14": 6
           },
           "Branches": []
         }
@@ -157,14 +179,37 @@
       "UrlShortner.Api.CreateUrl.StoreShortUrl/<CreateShortUrl>d__2": {
         "System.Void UrlShortner.Api.CreateUrl.StoreShortUrl/<CreateShortUrl>d__2::MoveNext()": {
           "Lines": {
-            "16": 3,
-            "17": 3,
-            "18": 3,
-            "19": 3,
-            "20": 3,
-            "21": 3
+            "17": 5,
+            "18": 5,
+            "19": 5,
+            "20": 5,
+            "21": 4,
+            "22": 4,
+            "23": 4,
+            "24": 4,
+            "26": 1,
+            "27": 1,
+            "29": 4,
+            "30": 5
           },
-          "Branches": []
+          "Branches": [
+            {
+              "Line": 20,
+              "Offset": 237,
+              "EndOffset": 242,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 20,
+              "Offset": 237,
+              "EndOffset": 393,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
         }
       }
     }
