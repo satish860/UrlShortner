@@ -46,11 +46,13 @@ namespace UrlShortner.Tests
                 services.AddMarten(opt =>
                 {
                     opt.Connection(_database.ConnectionString);
-                });
+
+                }).InitializeWith<TestingData>();
             });
             
-
         }
+
+        
 
         async Task IAsyncLifetime.DisposeAsync()
         {

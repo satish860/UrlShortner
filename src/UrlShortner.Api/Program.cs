@@ -2,6 +2,7 @@ global using FastEndpoints;
 using Marten;
 using Microsoft.Extensions.Options;
 using UrlShortner.Api.CreateUrl;
+using UrlShortner.Api.GetUrl;
 using Weasel.Core;
 
 namespace UrlShortner.Api
@@ -12,6 +13,7 @@ namespace UrlShortner.Api
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddScoped<IStoreShortUrl, StoreShortUrl>();
+            builder.Services.AddScoped<IGetShortCodeRepository,GetShortCodeRepository>();
             builder.Services.AddFastEndpoints();
             builder.Services.AddMarten(opt =>
             {

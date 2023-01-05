@@ -17,7 +17,7 @@ namespace UrlShortner.Tests
         public GetUrlEndpointTests(ApiWebFactory apiWebFactory)
         {
             this.apiWebFactory = apiWebFactory;
-            this.httpClient = apiWebFactory.CreateClient();
+            this.httpClient = apiWebFactory.CreateDefaultClient();
         }
 
         [Fact]
@@ -25,7 +25,15 @@ namespace UrlShortner.Tests
         {
             var response = await this.httpClient.GetAsync("/p2psps");
             Assert.NotNull(response);
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task Should_be_To_Get_Redirect_response()
+        {
+            var response = await this.httpClient.GetAsync("/dssfs");
+            Assert.NotNull(response);
+            Assert.Equal(HttpStatusCode.Moved, response.StatusCode);
         }
     }
 }
