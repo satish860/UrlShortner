@@ -4,24 +4,24 @@
       "UrlShortner.Api.Program": {
         "System.Void UrlShortner.Api.Program::Main(System.String[])": {
           "Lines": {
-            "12": 2,
-            "13": 2,
-            "14": 2,
-            "15": 2,
-            "16": 2,
-            "17": 2,
-            "18": 2,
-            "19": 2,
-            "20": 2,
-            "21": 2,
-            "22": 2,
-            "23": 4,
-            "25": 2,
-            "26": 2,
-            "27": 2,
-            "28": 2,
-            "29": 2,
-            "30": 2
+            "12": 4,
+            "13": 4,
+            "14": 4,
+            "15": 4,
+            "16": 4,
+            "17": 4,
+            "18": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4,
+            "23": 8,
+            "25": 4,
+            "26": 4,
+            "27": 4,
+            "28": 4,
+            "29": 4,
+            "30": 4
           },
           "Branches": [
             {
@@ -30,7 +30,7 @@
               "EndOffset": 49,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 2
+              "Hits": 4
             },
             {
               "Line": 19,
@@ -38,9 +38,97 @@
               "EndOffset": 58,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 2
+              "Hits": 4
             }
           ]
+        }
+      }
+    },
+    "C:\\Github\\UrlShortner\\src\\UrlShortner.Api\\GetUrl\\GetShortCodeRepository.cs": {
+      "UrlShortner.Api.GetUrl.GetShortCodeRepository": {
+        "System.Void UrlShortner.Api.GetUrl.GetShortCodeRepository::.ctor(Marten.IDocumentStore)": {
+          "Lines": {
+            "10": 2,
+            "11": 2,
+            "12": 2,
+            "13": 2
+          },
+          "Branches": []
+        }
+      },
+      "UrlShortner.Api.GetUrl.GetShortCodeRepository/<GetUrlFrom>d__2": {
+        "System.Void UrlShortner.Api.GetUrl.GetShortCodeRepository/<GetUrlFrom>d__2::MoveNext()": {
+          "Lines": {
+            "16": 2,
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 2
+          },
+          "Branches": [
+            {
+              "Line": 21,
+              "Offset": 338,
+              "EndOffset": 340,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 21,
+              "Offset": 338,
+              "EndOffset": 378,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Github\\UrlShortner\\src\\UrlShortner.Api\\GetUrl\\GetUrlEndpoint.cs": {
+      "UrlShortner.Api.GetUrl.GetUrlEndpoint": {
+        "System.Void UrlShortner.Api.GetUrl.GetUrlEndpoint::Configure()": {
+          "Lines": {
+            "6": 4,
+            "7": 4,
+            "8": 4,
+            "9": 4
+          },
+          "Branches": []
+        }
+      },
+      "UrlShortner.Api.GetUrl.GetUrlEndpoint/<HandleAsync>d__1": {
+        "System.Void UrlShortner.Api.GetUrl.GetUrlEndpoint/<HandleAsync>d__1::MoveNext()": {
+          "Lines": {
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Github\\UrlShortner\\src\\UrlShortner.Api\\GetUrl\\GetUrlRequest.cs": {
+      "UrlShortner.Api.GetUrl.GetUrlRequest": {
+        "System.String UrlShortner.Api.GetUrl.GetUrlRequest::get_ShortCode()": {
+          "Lines": {
+            "5": 3
+          },
+          "Branches": []
         }
       }
     },
@@ -48,19 +136,25 @@
       "UrlShortner.Api.Domain.Result`1": {
         "T UrlShortner.Api.Domain.Result`1::get_Data()": {
           "Lines": {
-            "5": 10
+            "5": 16
           },
           "Branches": []
         },
         "System.Boolean UrlShortner.Api.Domain.Result`1::get_IsSucess()": {
           "Lines": {
-            "7": 8
+            "7": 12
           },
           "Branches": []
         },
         "System.String UrlShortner.Api.Domain.Result`1::get_Error()": {
           "Lines": {
-            "9": 6
+            "9": 10
+          },
+          "Branches": []
+        },
+        "System.Int32 UrlShortner.Api.Domain.Result`1::get_ErrorCode()": {
+          "Lines": {
+            "11": 11
           },
           "Branches": []
         }
@@ -70,19 +164,19 @@
       "UrlShortner.Api.Domain.ShortUrl": {
         "System.String UrlShortner.Api.Domain.ShortUrl::get_Id()": {
           "Lines": {
-            "5": 39
+            "5": 49
           },
           "Branches": []
         },
         "System.String UrlShortner.Api.Domain.ShortUrl::get_Url()": {
           "Lines": {
-            "7": 10
+            "7": 13
           },
           "Branches": []
         },
         "System.String UrlShortner.Api.Domain.ShortUrl::get_OriginalUrl()": {
           "Lines": {
-            "9": 10
+            "9": 14
           },
           "Branches": []
         }
@@ -92,19 +186,19 @@
       "UrlShortner.Api.CreateUrl.CreateUrlEndpoint": {
         "System.Void UrlShortner.Api.CreateUrl.CreateUrlEndpoint::Configure()": {
           "Lines": {
-            "17": 2,
-            "18": 2,
-            "19": 2,
-            "20": 2
+            "17": 4,
+            "18": 4,
+            "19": 4,
+            "20": 4
           },
           "Branches": []
         },
         "System.Void UrlShortner.Api.CreateUrl.CreateUrlEndpoint::.ctor(UrlShortner.Api.CreateUrl.IStoreShortUrl)": {
           "Lines": {
-            "11": 4,
-            "12": 4,
-            "13": 4,
-            "14": 4
+            "11": 6,
+            "12": 6,
+            "13": 6,
+            "14": 6
           },
           "Branches": []
         }
@@ -168,10 +262,10 @@
       "UrlShortner.Api.CreateUrl.StoreShortUrl": {
         "System.Void UrlShortner.Api.CreateUrl.StoreShortUrl::.ctor(Marten.IDocumentStore)": {
           "Lines": {
-            "11": 6,
-            "12": 6,
-            "13": 6,
-            "14": 6
+            "11": 9,
+            "12": 9,
+            "13": 9,
+            "14": 9
           },
           "Branches": []
         }
@@ -179,18 +273,18 @@
       "UrlShortner.Api.CreateUrl.StoreShortUrl/<CreateShortUrl>d__2": {
         "System.Void UrlShortner.Api.CreateUrl.StoreShortUrl/<CreateShortUrl>d__2::MoveNext()": {
           "Lines": {
-            "17": 5,
-            "18": 5,
-            "19": 5,
-            "20": 5,
-            "21": 4,
-            "22": 4,
-            "23": 4,
-            "24": 4,
+            "17": 6,
+            "18": 6,
+            "19": 6,
+            "20": 6,
+            "21": 5,
+            "22": 5,
+            "23": 5,
+            "24": 5,
             "26": 1,
             "27": 1,
-            "29": 4,
-            "30": 5
+            "29": 5,
+            "30": 6
           },
           "Branches": [
             {
@@ -199,7 +293,7 @@
               "EndOffset": 242,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 4
+              "Hits": 5
             },
             {
               "Line": 20,
