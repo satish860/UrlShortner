@@ -28,8 +28,8 @@ namespace UrlShortner.Api.CreateUrl
             var savedShortcode = await this.storeShortUrl.CreateShortUrl(new Domain.ShortUrl
             {
                 Id = shortcode,
-                OriginalUrl = shortUrl,
-                Url = req.Url
+                OriginalUrl = req.Url,
+                Url = shortUrl
             });
 
             var response = new CreateUrlResponse

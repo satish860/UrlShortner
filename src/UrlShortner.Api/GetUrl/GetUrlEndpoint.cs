@@ -23,7 +23,7 @@
                 await SendNotFoundAsync(ct);
             }
             else
-            await SendRedirectAsync(shortUrlResult.Data.OriginalUrl,isPermanant:true,ct);
+            await SendRedirectAsync(shortUrlResult.Data.OriginalUrl,isPermanant:false,ct);
         }
     }
 }
