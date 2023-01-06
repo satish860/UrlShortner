@@ -1,5 +1,6 @@
 ﻿using FastEndpoints;
 using Nanoid;
+using UrlShortner.Api.GetUrl;
 
 namespace UrlShortner.Api.CreateUrl
 {
@@ -35,7 +36,7 @@ namespace UrlShortner.Api.CreateUrl
             {
                 Url = shortUrl
             };
-            await SendAsync(response, 200, ct);
+            await SendCreatedAtAsync<GetUrlEndpoint>(new { shortcode = shortcode }, response, cancellation: ct);
         }
     }
 }

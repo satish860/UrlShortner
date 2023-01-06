@@ -43,7 +43,7 @@ namespace UrlShortner.Tests
             };
             var (response,result) = await this.httpClient
                 .POSTAsync<CreateUrlEndpoint, CreateUrlRequest, CreateUrlResponse>(request);
-            response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+            response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
             result.Url.Should().NotBeEmpty();
         }
     }
