@@ -1,0 +1,32 @@
+containers: {
+    db: {
+     image: "postgres"
+     env:{
+        POSTGRES_PASSWORD: "manning"
+     }
+     ports: "5432/tcp"
+     dirs:{
+        "/var/lib/postgresql/data": "volume://pgdata?subpath=data"
+     }
+    }
+    web: {
+        build: {
+            "context":"."
+            "dockerfile": "src/UrlShortner.Api/Dockerfile"
+        }
+        env: {
+           "ASPNETCORE_ENVIRONMENT":"Development"
+           "ASPNETCORE_URLS":"https://+:443;http://+:80"
+           "ConnectionStrings__Default":"host=db;database=postgres;password=manning;username=postgres"
+        }
+        dependsOn: [
+            "db"
+        ]
+       ports: publish: "80/http"
+    }
+ }
+
+ volumes: 
+    "pgdata": {
+        accessModes: "readWriteOnce"
+      }
