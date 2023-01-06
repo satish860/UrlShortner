@@ -1,4 +1,5 @@
 global using FastEndpoints;
+global using FluentValidation;
 using Marten;
 using Microsoft.Extensions.Options;
 using UrlShortner.Api.CreateUrl;

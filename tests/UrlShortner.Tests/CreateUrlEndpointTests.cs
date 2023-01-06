@@ -46,5 +46,31 @@ namespace UrlShortner.Tests
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
             result.Url.Should().NotBeEmpty();
         }
+
+        [Fact]
+        public async Task Should_get_validation_error_when_Url_is_Empty()
+        {
+            var request = new CreateUrlRequest
+            {
+                Url = ""
+            };
+            var (response, result) = await this.httpClient
+                .POSTAsync<CreateUrlEndpoint, CreateUrlRequest, CreateUrlResponse>(request);
+            response.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
+            result.Url.Should().NotBeEmpty();
+        }
+
+        [Fact]
+        public async Task Should_get_validation_error_when_url_is_not_proper()
+        {
+            var request = new CreateUrlRequest
+            {
+                Url = "Helloworld"
+            };
+            var (response, result) = await this.httpClient
+                .POSTAsync<CreateUrlEndpoint, CreateUrlRequest, CreateUrlResponse>(request);
+            response.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
+            result.Url.Should().NotBeEmpty();
+        }
     }
 }
