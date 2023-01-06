@@ -14,6 +14,7 @@ namespace UrlShortner.Api
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddScoped<IStoreShortUrl, StoreShortUrl>();
             builder.Services.AddScoped<IGetShortCodeRepository,GetShortCodeRepository>();
+            builder.Configuration.AddEnvironmentVariables();
             builder.Services.AddFastEndpoints();
             builder.Services.AddMarten(opt =>
             {

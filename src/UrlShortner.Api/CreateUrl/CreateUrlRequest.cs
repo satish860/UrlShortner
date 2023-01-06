@@ -2,7 +2,7 @@
 {
     public class CreateUrlRequest
     {
-        public string Url { get; set; }
+        public string Url { get; set; } = string.Empty;
 
         public string AlternativeKey { get; set; } = string.Empty;
 
