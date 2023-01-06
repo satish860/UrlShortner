@@ -1,5 +1,6 @@
 global using FastEndpoints;
 global using FluentValidation;
+using FastEndpoints.Swagger;
 using Marten;
 using Microsoft.Extensions.Options;
 using UrlShortner.Api.CreateUrl;
@@ -16,6 +17,7 @@ namespace UrlShortner.Api
             builder.Services.AddScoped<IStoreShortUrl, StoreShortUrl>();
             builder.Services.AddScoped<IGetShortCodeRepository,GetShortCodeRepository>();
             builder.Configuration.AddEnvironmentVariables();
+           
             builder.Services.AddFastEndpoints();
             builder.Services.AddMarten(opt =>
             {
