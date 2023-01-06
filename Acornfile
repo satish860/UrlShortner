@@ -10,7 +10,10 @@ containers: {
      }
     }
     web: {
-        image:"urlshortnerapi:dev"
+        build:{
+            context:"."
+            dockerfile:"src/UrlShortner.Api/Dockerfile"
+        }
         env: {
            "ASPNETCORE_ENVIRONMENT":"Development"
            "ASPNETCORE_URLS":"http://+:80"
