@@ -33,7 +33,7 @@ namespace UrlShortner.Tests
         {
             var response = await this.httpClient.GetAsync("/dssfs");
             Assert.NotNull(response);
-            Assert.Equal(HttpStatusCode.Moved, response.StatusCode);
+            Assert.Equal(HttpStatusCode.Redirect, response.StatusCode);
         }
     }
 }
