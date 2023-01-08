@@ -1,0 +1,16 @@
+# Table of contents
+
+* [UrlShortner](README.md)
+* [docs](docs/README.md)
+  * [Introduction](docs/01-Introduction.md)
+  * [Coming soon](docs/02-Architecture.md)
+  * [03-Basic-Application](docs/03-Basic-Application.md)
+  * [04-Database-Marten](docs/04-Database-Marten.md)
+  * [05-Validation](docs/05-Validation.md)
+  * [06-Docker](docs/06-Docker.md)
+  * [07-HealthEndpoint](docs/07-HealthEndpoint.md)
+  * [08-Basic-CICD](docs/08-Basic-CICD.md)
+  * [09-Kubernetes-deployment](docs/09-Kubernetes-deployment.md)
+  * [10-PathToProduction](docs/10-PathToProduction.md)
+  * [11-Observablity](docs/11-Observablity.md)
+  * [12-Nextjs](docs/12-Nextjs.md)
