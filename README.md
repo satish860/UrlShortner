@@ -16,5 +16,7 @@ to production.
   * Should create a Docker-compose file for the same and run locally
   	 - [X] Should be able to run the application locally using the Docker
   * Should be able to run Kubernetes using the Local Acorn
-      - [ ] Should be able to run the Acorn 
-      - [ ] Learn about the Acorn and understand how to make CI/CD work
+      - [X] Should be able to run the Acorn 
+      - [X] Learn about the Acorn and understand how to make CI/CD work
+
+Hit a road block when deploying the application to GKE and digital ocean. I am trying to learn Kubernetes to fix the issue with Acorn
