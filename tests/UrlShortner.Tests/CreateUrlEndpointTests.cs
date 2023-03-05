@@ -31,7 +31,7 @@ namespace UrlShortner.Tests
             var (response,result) = await this.httpClient
                 .POSTAsync<CreateUrlEndpoint, CreateUrlRequest,CreateUrlResponse>(request);
             result.Should().NotBeNull();
-            result.Url.Should().NotBeNullOrEmpty();
+            result!.Url!.Should().NotBeNullOrEmpty();
         }
 
         [Fact]
@@ -43,8 +43,8 @@ namespace UrlShortner.Tests
             };
             var (response,result) = await this.httpClient
                 .POSTAsync<CreateUrlEndpoint, CreateUrlRequest, CreateUrlResponse>(request);
-            response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
-            result.Url.Should().NotBeEmpty();
+            response!.StatusCode!.Should().Be(System.Net.HttpStatusCode.Created);
+            result!.Url!.Should().NotBeEmpty();
         }
 
         [Fact]
@@ -56,8 +56,8 @@ namespace UrlShortner.Tests
             };
             var (response, result) = await this.httpClient
                 .POSTAsync<CreateUrlEndpoint, CreateUrlRequest, CreateUrlResponse>(request);
-            response.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
-            result.Url.Should().NotBeEmpty();
+            response!.StatusCode!.Should().Be(System.Net.HttpStatusCode.BadRequest);
+            result!.Url!.Should().NotBeEmpty();
         }
 
         [Fact]
@@ -69,8 +69,8 @@ namespace UrlShortner.Tests
             };
             var (response, result) = await this.httpClient
                 .POSTAsync<CreateUrlEndpoint, CreateUrlRequest, CreateUrlResponse>(request);
-            response.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
-            result.Url.Should().NotBeEmpty();
+            response!.StatusCode!.Should().Be(System.Net.HttpStatusCode.BadRequest);
+            result!.Url!.Should().NotBeEmpty();
         }
     }
 }

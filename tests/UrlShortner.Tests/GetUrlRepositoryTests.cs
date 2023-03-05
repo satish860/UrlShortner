@@ -42,7 +42,7 @@ namespace UrlShortner.Tests
             });
             GetShortCodeRepository getShortCodeRepository = new GetShortCodeRepository(this.store);
             var result = await getShortCodeRepository.GetUrlFrom("psqrt");
-            result.Data.OriginalUrl.Should().Be("https://google.co.in");
+            result!.Data!.OriginalUrl.Should().Be("https://google.co.in");
         }
     }
 }

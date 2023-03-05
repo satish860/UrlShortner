@@ -26,7 +26,6 @@ namespace UrlShortner.Api.GetUrl
                     Error = "URL Does not exist",
                     ErrorCode = 52
                 };
-
             }
             return new Result<ShortUrl?>
             {
