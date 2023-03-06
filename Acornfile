@@ -6,7 +6,7 @@ containers: {
      }
      ports: "5432/tcp"
      dirs:{
-        "/var/lib/postgresql/data": "volume://pgdata?subpath=data"
+        "/var/lib/postgresql/data": "volume://db"
      }
     }
     web: {
@@ -24,9 +24,11 @@ containers: {
         ]
        ports: publish: "80/http"
     }
- }
+}
 
- volumes: 
-    "pgdata": {
-        accessModes: "readWriteOnce"
-      }
+volumes: {
+   "db":{
+      size:100M
+   }
+}
+   
