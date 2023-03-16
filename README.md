@@ -8,7 +8,7 @@ to production.
 ## Milestone:
  * Should be able to shorten the URL with the Create URL. 
     - [X] Should Have complete end to end Test with good coverge
-    - [ ] Should have Analyzer and prepare the application for Production
+    - [X] Should have Analyzer and prepare the application for Production
     - [X] Should Run the build and Test using the Github CI/CD
   * Should be able to Redirect the webpage on request
      - [X] Should have complete end to end Test
